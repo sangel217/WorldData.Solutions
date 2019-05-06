@@ -1,0 +1,30 @@
+@using WorldData.Models;
+@using System;
+
+<h1>Countries</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>You have no countries!</h3>
+}
+
+@foreach(var country in Model)
+{
+  <table>
+    <th>@country.GetCode()</th>
+    <th>@country.GetName()</th>
+    <th>@country.GetContinent()</th>
+    <th>@country.GetRegion()</th>
+    <th>@country.GetSurfaceArea()</th>
+    <th>@country.GetIndepYear()</th>
+    <th>@country.GetPopulation()</th>
+    <th>@country.GetLifeExpectancy()</th>
+    <th>@country.GetGnp()</th>
+    <th>@country.GetGnpOld()</th>
+    <th>@country.GetLocalName()</th>
+    <th>@country.GetGovtForm()</th>
+    <th>@country.GetHeadOfState()</th>
+    <th>@country.GetCapital()</th>
+    <th>@country.GetCode2()</th>
+  </table>
+}

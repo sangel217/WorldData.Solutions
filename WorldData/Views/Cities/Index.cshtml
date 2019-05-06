@@ -1,0 +1,21 @@
+@using WorldData.Models;
+@using System;
+
+<h1>Cities</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>You have no cities!</h3>
+}
+
+@foreach(var city in Model)
+{
+  <table>
+    <th>@city.GetId()</th>
+    <th>@city.GetName()</th>
+    <th>@city.GetCountryCode()</th>
+    <th>@city.GetDistrict()</th>
+    <th>@city.GetPopulation()</th>
+  </table>
+
+}
