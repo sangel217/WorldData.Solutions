@@ -134,7 +134,11 @@ namespace WorldData.Models
         string countryLocalName = rdr.GetString(10);
         string countryGovtForm = rdr.GetString(11);
         string countryHeadOfState = rdr.GetString(12);
-        int countryCapital = rdr.GetInt32(13);
+        int countryCapital = 0;
+        if(countryCapital != null)
+        {
+          countryCapital = rdr.GetInt32(13);
+        }
         string countryCode2 = rdr.GetString(14);
         Country newCountry = new Country (countryCode, countryName, countryContinent, countryRegion, countrySurfaceArea, countryIndepYear, countryPopulation, countryLifeExpectancy, countryGnp, countryGnpOld, countryLocalName, countryGovtForm, countryHeadOfState, countryCapital, countryCode2);
         allCountries.Add(newCountry);
